@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <!-- CSS FILE -->
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- CALCULATOR CONTAINER -->
+        <div class="calculator">
+            <!-- FORM/ ADDING DIFFERENT FIELDS -->
+            <form>
+                <!-- ADD ONE DIV WITH INPUT FIELD -->
+                <div class="display">
+                    <input type="text" name="display" id="display" readonly>
+                </div>
+                <!-- 1ST DIV START -->
+                <div>
+                    <input type="button" value="AC" onclick="clearDisplay()">
+                    <input type="button" value="DE" onclick="deleteLastCharacter()">
+                    <input type="button" value="." onclick="appendToDisplay('.')">
+                    <input type="button" value="/" onclick="appendToDisplay('/')">
+                </div>
+                <!-- 1ST DIV END -->
+                <!-- 2ND DIV START -->
+                <div>
+                    <input type="button" value="7" onclick="appendToDisplay('7')">
+                    <input type="button" value="8" onclick="appendToDisplay('8')">
+                    <input type="button" value="9" onclick="appendToDisplay('9')">
+                    <input type="button" value="*" onclick="appendToDisplay('*')">
+                </div>
+                <!-- 2ND DIV END -->
+                <!-- 3RD DIV START -->
+                <div>
+                    <input type="button" value="4" onclick="appendToDisplay('4')">
+                    <input type="button" value="5" onclick="appendToDisplay('5')">
+                    <input type="button" value="6" onclick="appendToDisplay('6')">
+                    <input type="button" value="-" onclick="appendToDisplay('-')">
+                </div>
+                <!-- 3RD DIV END -->
+                <!-- 4TH DIV START -->
+                <div>
+                    <input type="button" value="1" onclick="appendToDisplay('1')">
+                    <input type="button" value="2" onclick="appendToDisplay('2')">
+                    <input type="button" value="3" onclick="appendToDisplay('3')">
+                    <input type="button" value="+" onclick="appendToDisplay('+')">
+                </div>
+                <!-- 4TH DIV END -->
+                <!-- 5TH LAST DIV START -->
+                <div>
+                    <input type="button" value="00" onclick="appendToDisplay('00')">
+                    <input type="button" value="0" onclick="appendToDisplay('0')">
+                    <input type="button" value="=" class="equal" onclick="calculateResult()">
+                </div>
+                <!-- 5TH LAST DIV END -->
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
