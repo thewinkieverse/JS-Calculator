@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  :root {
+    --layout: #F4EEE0;
+    --background-color: #4F4557;
+    --box-shadow: -8px -8px -15px rgb(255, 253, 253) 5px 5px 15px rgb(240, 238, 238);
+    --hover-color: #6D5D6E;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    background: var(--layout);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .calculator {
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px 10px;
+    box-shadow: -8px -8px 15px rgba(87, 86, 86, 0.59), 5px 5px 15px rgb(193, 193, 193);
+
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 10px;
+    color: var(--layout);
+  }
+  .calculator form input:hover {
+    background-color: var(--hover-color);
+  }
+  form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+  }
+  form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+  }
+  form input.equal {
+    width: 150px;
+  }
+  
+  /* LET'S ADD THE MEDIA QUARRIES */
+  @media (max-width: 768px) {
+    .calculator form input {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+    form .display input {
+      font-size: 30px;
+    }
+    form input.equal {
+      width: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .calculator form input {
+      width: 30px;
+      height: 30px;
+      font-size: 12px;
+    }
+    form .display input {
+      font-size: 20px;
+    }
+    form input.equal {
+      width: 100px;
+    }
+  }
